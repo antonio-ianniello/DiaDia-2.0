@@ -7,15 +7,14 @@ import java.util.Properties;
 
 import it.uniroma3.diadia.Borsa;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
-import it.uniroma3.diadia.gui.Sprite;
-import javafx.scene.paint.Color;
+
 
 /**
  * Questa classe ha la funzione di gestire i CFU
  * e di memorizzare gli attrezzi in un oggetto
  * istanza della classe borsa.
  * 
- * @author fabrizio
+ * @author antonio
  *
  */
 public class Giocatore {
@@ -34,17 +33,6 @@ public class Giocatore {
 	}
 	
 	
-	public Sprite getPlayer() {
-		return player;
-	}
-
-	public void setPlayer(Sprite player) {
-		this.player = player;
-	}
-
-
-
-
 
 	public boolean removeAttrezzo(Attrezzo attrezzo) {
 		return b1.removeAttrezzo(attrezzo);

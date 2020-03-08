@@ -13,7 +13,7 @@ import java.util.*;
  * E' collegata ad altre stanze attraverso delle uscite.
  * Ogni uscita e' associata ad una direzione.
  * 
- * @author docente di POO 
+ * @author antonio
  * @see Attrezzo
  * @version base
 */

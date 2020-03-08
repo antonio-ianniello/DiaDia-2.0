@@ -14,7 +14,7 @@ import java.util.*;
  * Questa classe ha la funzione di gestire la borsa del
  * giocatore, svolgendo operazioni con gli attrezzi contenuti.
  * 
- * @author fabrizio
+ * @author antonio
  *
  */
 public class Borsa {

@@ -10,7 +10,7 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
  * e di memorizzare la stanza iniziale (entrata) e 
  * quella finale (uscita).
  * 
- * @author fabrizio
+ * @author antonio
  * @see Stanza, Attrezzo
  *
  */
