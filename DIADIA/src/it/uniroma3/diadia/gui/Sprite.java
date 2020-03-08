@@ -19,22 +19,22 @@ public class Sprite extends Rectangle{
 	//vorrei che le stanze fossero distanti 5
 	void moveLeft() {
 		
-		setTranslateX(getTranslateX() - 5);
+		setTranslateX(getTranslateX() - 50);
 	}
 	
 	void moveRight() {
 		
-		setTranslateX(getTranslateX() + 5);
+		setTranslateX(getTranslateX() + 50);
 	}
 	
 	void moveUp() {
 		
-		setTranslateY(getTranslateY() - 5);
+		setTranslateY(getTranslateY() - 50);
 	}
 
 	void moveDown() {
 	
-	setTranslateY(getTranslateY() + 5);
+	setTranslateY(getTranslateY() + 50);
 }
 	
 }
