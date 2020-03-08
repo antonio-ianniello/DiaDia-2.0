@@ -1,27 +1,69 @@
 package it.uniroma3.diadia.gui;
 
 import javafx.application.Application;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class GuiDiaDia extends Application{
 
-	private VBox vbox = new VBox(5);
-	private Label label = new Label("Benvenuti nel gioco");
-	private Scene scene1;
+	private Pane root = new Pane();
 	
+	private Sprite player = new Sprite(300, 750, 40, 40, "player", Color.BLUE);
+
 	
-	public void Start() {
-		this.vbox.getChildren().add(label);
-		this.scene1= new Scene(vbox);
+		
+
+	private Parent createContent() {
+		
+		root.setPrefSize(600, 800);
+		
+		root.getChildren().add(player);
+		
+		return root;
 	}
+	
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-		// TODO Auto-generated method stub
-		stage.setScene(scene1);
+		
+		Scene scene = new Scene(createContent());
+		
+		scene.setOnKeyPressed(e ->{
+			
+			switch (e.getCode()) {
+			
+			case A:
+				player.moveLeft();
+				break;
+				
+			case D:
+				player.moveRight();
+				break;
+				
+			case W:
+				player.moveUp();
+				break;
+			case S:
+				player.moveDown();
+				break;
+			case ESCAPE:
+				break;
+			default:
+				break;
+			
+			
+			}
+			
+			
+		});
+		
+		
+		
+		stage.setTitle("DIADIA");
+		stage.setScene(scene);
 		stage.show();
 		
 		
