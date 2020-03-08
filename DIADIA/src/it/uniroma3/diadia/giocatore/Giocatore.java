@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import it.uniroma3.diadia.Borsa;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.gui.Sprite;
+import javafx.scene.paint.Color;
 
 /**
  * Questa classe ha la funzione di gestire i CFU
@@ -22,6 +24,8 @@ public class Giocatore {
 	private int cfu;
 	private Borsa b1;
 	
+
+	
 	public Giocatore() throws FileNotFoundException, IOException {
 	  	prop= new Properties();
     	prop.load(new FileReader("resource/diadia.properties"));
@@ -29,6 +33,19 @@ public class Giocatore {
 		this.b1= new Borsa(10);
 	}
 	
+	
+	public Sprite getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Sprite player) {
+		this.player = player;
+	}
+
+
+
+
+
 	public boolean removeAttrezzo(Attrezzo attrezzo) {
 		return b1.removeAttrezzo(attrezzo);
 	}
