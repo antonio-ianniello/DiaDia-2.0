@@ -16,8 +16,9 @@ import it.uniroma3.diadia.comandi.InterfacciaUtenteConsole;
  *
  * Questa e' la classe principale crea e istanzia tutte le altre
  *
- * @author  docente di POO 
+ * @author  -docente di POO 
  *         (da un'idea di Michael Kolling and David J. Barnes) 
+ *         -Ianniello Antonio 
  *          
  * @version base
  */
