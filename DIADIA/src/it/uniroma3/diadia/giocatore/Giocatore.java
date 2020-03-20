@@ -47,7 +47,7 @@ public class Giocatore {
 		return b1.getAttrezzo(oggetto);
 	}
 	
-	public int getCfu() {
+	public  int getCfu() {
 		return this.cfu;
 	}
 

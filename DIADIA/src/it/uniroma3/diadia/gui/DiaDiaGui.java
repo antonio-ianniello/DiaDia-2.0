@@ -3,13 +3,16 @@ package it.uniroma3.diadia.gui;
 
 
 
+import it.uniroma3.diadia.Partita;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class mainGui extends Application{
+public class DiaDiaGui extends Application{
 
-	private CaricatoreScena cs = new CaricatoreScena();
+	
+	private Partita partita;
+	private CaricatoreScena cs;
 	private Scene scenaCorrente;
 	
 	public static void main(String[] args) {
@@ -18,7 +21,10 @@ public class mainGui extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		//inizia partita
+		partita = new Partita();
 		// setto lo stage principale
+		cs = new CaricatoreScena();
 		cs.setStageCorrente(primaryStage);
 		
 		//carico la scena 1

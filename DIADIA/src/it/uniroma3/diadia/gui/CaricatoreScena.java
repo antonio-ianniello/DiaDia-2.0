@@ -1,6 +1,7 @@
 package it.uniroma3.diadia.gui;
 
 import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.giocatore.Giocatore;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -131,12 +132,14 @@ public class CaricatoreScena {
 		//hbox vita
 		HBox vitaBox = new HBox();
 		Label labVita = new Label("VITA DEL GIOCATORE:  ");
-	    Text textVita = new Text("0");
-		
+	    Text textVita = new Text("0");//devo prenderlo da diadia
+	
 
 		//hbox stanza corrente
 		HBox stanzaBox = new HBox();
 		Label labStanza = new Label("STANZA ATTUALMENTE OCCUPATA:  ");
+		
+		//prendi la stanza corrente da diadia
 		Text textStanza = new Text("atrio");
 		
 		//hbox chiave
@@ -323,14 +326,14 @@ public class CaricatoreScena {
 				box2.autosize();
 			
 				//Button
-				Button Aggiungi = new Button("Aggiungi");
+				Button pulsanteAggiungi = new Button("Prendi");
 				
 				
-				Button Rimuovi = new Button("Rimuovi");
+				Button pulsanteRimuovi = new Button("Posa");
 				
 				
-				Button back = new Button("Back");
-				back.setOnAction(new EventHandler<ActionEvent>() {
+				Button pulsanteIndietro = new Button("Indietro");
+				pulsanteIndietro.setOnAction(new EventHandler<ActionEvent>() {
 					
 					@Override
 					public void handle(ActionEvent arg0) {
@@ -350,7 +353,7 @@ public class CaricatoreScena {
 
 				
 				
-				box2.getChildren().addAll(Aggiungi,Rimuovi,back);
+				box2.getChildren().addAll(pulsanteAggiungi,pulsanteRimuovi,pulsanteIndietro);
 		
 				
 				root.getChildren().add(borsaTitle);
@@ -358,13 +361,7 @@ public class CaricatoreScena {
 				root.getChildren().add(box);
 				root.getChildren().add(box2);
 
-			
-		
-	
-		
 
-	
-		
 		Scene prima = new Scene(root,wMAX,hMAx);
 		
 		
